@@ -1,10 +1,10 @@
 import Header from "./components/Header";
 import styled from "styled-components";
 import FullPage from "./components/FullPage";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
 import { Player } from "video-react";
-import demonstration from "./assets/demonstration.mp4";
+// import demonstration from "./assets/demonstration.mp4";
 
 function App() {
   return (
@@ -83,7 +83,9 @@ function App() {
             poster="/assets/poster.png"
             width="100%"
             height="100%"
-            src={demonstration}
+            src={
+              "https://docs.google.com/uc?export=open&id=1uQsRE6puq4-RZ290X_hHI5_88tIB3vzR"
+            }
           />
         </VideoDiv>
       </FullPage>
