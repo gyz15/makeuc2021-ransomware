@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Icon from "./Icon";
 import { Link } from "react-router-dom";
+import FirstIcon from "./icons/FirstIcon";
+import SecondIcon from "./icons/SecondIcon";
+import ThirdIcon from "./icons/ThirdIcon";
+import FourthIcon from "./icons/FourthIcon";
 
 const Header = () => {
   const [firstButtonActive, setFirstButtonActive] = useState(false);
@@ -17,7 +21,7 @@ const Header = () => {
               href="/#what_is_it"
               onMouseEnter={() => setFirstButtonActive(true)}
               onMouseLeave={() => setFirstButtonActive(false)}>
-              <Icon />
+              <FirstIcon />
               <NavText active={firstButtonActive}>What is it</NavText>
             </a>
           </NavItem>
@@ -26,7 +30,7 @@ const Header = () => {
               href="/#what_does_it_do"
               onMouseEnter={() => setSecondButtonActive(true)}
               onMouseLeave={() => setSecondButtonActive(false)}>
-              <Icon />
+              <SecondIcon />
               <NavText active={secondButtonActive}>What does it do?</NavText>
             </a>
           </NavItem>
@@ -35,16 +39,16 @@ const Header = () => {
               href="/#demonstration"
               onMouseEnter={() => setThirdButtonActive(true)}
               onMouseLeave={() => setThirdButtonActive(false)}>
-              <Icon />
+              <ThirdIcon />
               <NavText active={thirdButtonActive}>Demonstration</NavText>
             </a>
           </NavItem>
           <NavItem>
             <a
               href="/#what_can_you_do"
-              onMouseEnter={() => setThirdButtonActive(true)}
-              onMouseLeave={() => setThirdButtonActive(false)}>
-              <Icon />
+              onMouseEnter={() => setFourthButtonActive(true)}
+              onMouseLeave={() => setFourthButtonActive(false)}>
+              <FourthIcon />
               <NavText active={fourthButtonActive}>What can you do</NavText>
             </a>
           </NavItem>

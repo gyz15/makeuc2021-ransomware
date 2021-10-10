@@ -3,6 +3,8 @@ import styled from "styled-components";
 import FullPage from "./components/FullPage";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
+import { Player } from "video-react";
+import demonstration from "./assets/demonstration.mp4";
 
 function App() {
   return (
@@ -38,16 +40,21 @@ function App() {
         </PageSection>
       </FullPage>
       <FullPage>
-        <section id="what_does_it_do">
+        <PageSection id="what_does_it_do">
           <h1>What does it do</h1>
-          <VideoDiv />
-        </section>
+        </PageSection>
       </FullPage>
       <FullPage>
-        <section id="demonstration">
+        <VideoDiv id="demonstration">
           <h1>Demo</h1>
-          <VideoDiv />
-        </section>
+          <Player
+            playsInline
+            poster="/assets/poster.png"
+            width="100%"
+            height="100%"
+            src={demonstration}
+          />
+        </VideoDiv>
       </FullPage>
       <FullPage>
         <PageSection id="what_can_you_do">
@@ -96,5 +103,4 @@ const PageSection = styled.section`
 const VideoDiv = styled.div`
   height: 30rem;
   width: 50rem;
-  background-color: gray;
 `;
